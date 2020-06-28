@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Pangolin', cursive;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#logo {
+    width: 40%;
+}

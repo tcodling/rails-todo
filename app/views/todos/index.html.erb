@@ -1,5 +1,7 @@
-<% @todos.each do |todo| %>
+<ul class='list'>
+    <% @todos.each do |todo| %>
 
-<h2><%= todo.task %> (<%= todo.done %>)</h2>
+    <li><%= todo.task %> (<%= todo.done ? "✓" : "✗" %>)</li>
 
-<% end %>
+    <% end %>
+</ul>
