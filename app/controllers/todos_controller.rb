@@ -4,6 +4,10 @@ class TodosController < ApplicationController
         @todos = Todo.all
     end
 
+    def show
+        @todo = Todo.find(params[:id])
+    end
+
     def new
         @todo = Todo.new
     end
@@ -19,6 +23,6 @@ class TodosController < ApplicationController
 
     private
     def todo_params
-        params.require(:todo).permit(:task, :done)
+        params.require(:todo).permit(:task, :done, :notes)
     end
 end
