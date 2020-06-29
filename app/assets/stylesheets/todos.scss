@@ -23,3 +23,15 @@ body {
     padding: 4px;
     margin: 2px;
 }
+
+.list li:hover {
+    background-color: rgb(255, 119, 119);
+}
+
+.done {
+    float: right;
+    font-size: 115%;
+    margin: -4px;
+    padding: 0 4px;
+    border-left: 1px black solid;
+}
