@@ -31,3 +31,11 @@ ul {
 #logo {
     width: 40%;
 }
+
+button, input {
+    border: 1px black solid;
+    border-radius: 5px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    margin: 5px;
+}

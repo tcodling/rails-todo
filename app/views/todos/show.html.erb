@@ -1,7 +1,6 @@
-<div>
-    <%= @todo.task %>
-    <%= @todo.done %>
-    <%= @todo.notes %>
-    <%= link_to "Edit", edit_todo_path(@todo) %>
-    <%= link_to "Delete", @todo, method: "delete"%>
+<div class="show">
+    <h2><%= @todo.task %> <span class="doneShow"><%= @todo.done ? "✔" : "✘" %></span></h2>
+    <h2><%= @todo.notes %></h2>
+    <button><%= link_to "Edit", edit_todo_path(@todo) %></button>
+    <button><%= link_to "Delete", @todo, method: "delete"%></button>
 </div>
