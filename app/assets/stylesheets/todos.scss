@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+ h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
+ }
 
 body {
     font-family: 'Comfortaa', cursive;
@@ -24,7 +30,7 @@ body {
     margin: 2px;
 }
 
-.list li:hover, button:hover {
+.list li:hover, button:hover, input[type="submit"]:hover, .doneShow:hover {
     background-color: rgb(255, 119, 119);
 }
 

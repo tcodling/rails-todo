@@ -40,8 +40,15 @@ class TodosController < ApplicationController
         redirect_to '/'
     end
 
+    def toggle
+        @todo = Todo.find(params[:id])
+        @todo.done = !@todo.done
+        @todo.save
+        redirect_to @todo
+    end
+
     private
     def todo_params
-        params.require(:todo).permit(:task, :done, :notes)
+        params.require(:todo).permit(:task, :notes)
     end
 end
