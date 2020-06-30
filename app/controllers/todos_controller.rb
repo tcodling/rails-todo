@@ -10,12 +10,10 @@ class TodosController < ApplicationController
 
     def new
         @todo = Todo.new
-        # @list = List.find(params[:listId])
     end
 
     def create
         @todo = Todo.new(todo_params)
-        logger.debug
         if @todo.save 
             redirect_to '/' 
         else 
@@ -30,7 +28,7 @@ class TodosController < ApplicationController
     def update
         @todo = Todo.find(params[:todo_id])
         if @todo.update(todo_params)
-            redirect_to @todo
+            redirect_to "/lists/#{@todo.list_id}/#{@todo.id}"
         else
             render 'edit'
         end
@@ -46,7 +44,7 @@ class TodosController < ApplicationController
         @todo = Todo.find(params[:todo_id])
         @todo.done = !@todo.done
         @todo.save
-        redirect_to @todo
+        redirect_to "/lists/#{@todo.list_id}/#{@todo.id}"
     end
 
     private
