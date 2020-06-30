@@ -4,6 +4,7 @@ class CreateTodos < ActiveRecord::Migration[6.0]
       t.string :task
       t.boolean :done, default: false
       t.string :notes
+      t.belongs_to :list
       t.timestamps
     end
   end
