@@ -1,11 +1,8 @@
 class TodosController < ApplicationController
-    def index
-        @todo = Todo.new
-        @todos = Todo.all
-    end
+    before_action :get_todo
 
     def show
-        @todo = Todo.find(params[:todo_id])
+        # @todo = Todo.find(params[:todo_id])
     end
 
     def new
@@ -22,11 +19,9 @@ class TodosController < ApplicationController
     end
 
     def edit
-        @todo = Todo.find(params[:todo_id])
     end
 
     def update
-        @todo = Todo.find(params[:todo_id])
         if @todo.update(todo_params)
             redirect_to "/lists/#{@todo.list_id}/#{@todo.id}"
         else
@@ -35,13 +30,11 @@ class TodosController < ApplicationController
     end
 
     def destroy
-        @todo = Todo.find(params[:todo_id])
         @todo.destroy
         redirect_to '/'
     end
 
     def toggle
-        @todo = Todo.find(params[:todo_id])
         @todo.done = !@todo.done
         @todo.save
         redirect_to "/lists/#{@todo.list_id}/#{@todo.id}"
@@ -50,5 +43,10 @@ class TodosController < ApplicationController
     private
     def todo_params
         params.permit(:task, :notes, :list_id)
+    end
+
+    def get_todo
+        @todo = Todo.find(params[:todo_id])
+        @list = List.find(params[:list_id])
     end
 end
