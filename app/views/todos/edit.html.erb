@@ -1,7 +1,9 @@
 <%= form_with(url: "/lists/#{@list.id}/#{@todo.id}", method: 'patch') do |f| %>
 <div class="field">
-    <%= f.text_field :task %><br>
-    <%= f.text_area :notes %>
+    <%= f.label :task, "Task:" %>
+    <%= f.text_field :task, value: @todo.task %><br>
+    <%= f.label :notes, "Notes:" %>
+    <%= f.text_area :notes, value: @todo.notes %>
 </div>
 <div class="actions">
     <%= f.submit "Update" %>

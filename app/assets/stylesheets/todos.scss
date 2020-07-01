@@ -9,11 +9,10 @@
     width: 30%;
     font-size: 20px;
     padding: 10px;
-    background-color: rgb(252, 173, 173);
 }
 
 .list li:hover, button:hover, input[type="submit"]:hover, .doneShow:hover {
-    background-color: rgb(255, 119, 119);
+    cursor: pointer;
 }
 
 .doneIndex {
