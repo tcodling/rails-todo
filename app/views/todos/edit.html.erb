@@ -1,4 +1,4 @@
-<%= form_with(url: "/lists/#{@list.id}/#{@todo.id}", method: 'patch') do |f| %>
+<%= form_with(url: "/lists/#{@list.id}/todos/#{@todo.id}", method: 'patch') do |f| %>
 <div class="field">
     <%= f.label :task, "Task:" %>
     <%= f.text_field :task, value: @todo.task %><br>

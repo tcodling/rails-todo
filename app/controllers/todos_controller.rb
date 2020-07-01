@@ -22,7 +22,7 @@ class TodosController < ApplicationController
 
     def update
         if @todo.update(todo_params)
-            redirect_to "/lists/#{@todo.list_id}/#{@todo.id}"
+            redirect_to "/lists/#{@todo.list_id}/todos/#{@todo.id}"
         else
             render 'edit'
         end
@@ -36,7 +36,7 @@ class TodosController < ApplicationController
     def toggle
         @todo.done = !@todo.done
         @todo.save
-        redirect_to "/lists/#{@todo.list_id}/#{@todo.id}"
+        redirect_to "/lists/#{@todo.list_id}/todos/#{@todo.id}"
     end
 
     private
