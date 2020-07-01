@@ -1,6 +1,7 @@
 <div id='lists'>
     <% @lists.each do |list| %>
     <ul class='list'>
+        <%= list.name %>
         <% list.todos.each do |todo| %>
         <%= link_to "lists/#{list.id}/#{todo.id}" do %>
         <li><%= todo.task %> <span class='doneIndex'><%= todo.done ? "✔" : "✘" %></span></li>
@@ -9,4 +10,5 @@
         <button><%= link_to "New task", "/lists/#{list.id}" %></button>
     </ul>
     <% end %>
+    <button id='newList'>+</button>
 </div>

@@ -5,6 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+ h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
+ }
 
 body {
     font-family: 'Comfortaa', cursive;
@@ -12,5 +16,32 @@ body {
 
 #lists {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+}
+
+.list {
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 30%;
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(252, 173, 173);
+    margin: 10px;
+}
+
+.list li {
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 2px;
+}
+
+#newList {
+    width: 30%;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 45px;
 }

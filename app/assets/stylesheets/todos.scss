@@ -1,33 +1,15 @@
 // Place all the styles related to the Todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
- h1 {
-    font-family: 'Fredoka One', cursive;
-    font-size: 60px;
- }
-
-body {
-    font-family: 'Comfortaa', cursive;
-}
-
-.list, .show {
+.show {
     border: 1px black solid;
     border-radius: 5px;
-    width: 30%;
     margin: 0 auto;
+    width: 30%;
     font-size: 20px;
     padding: 10px;
     background-color: rgb(252, 173, 173);
-}
-
-.list li {
-    border: 1px black solid;
-    border-radius: 5px;
-    padding: 4px;
-    margin: 2px;
 }
 
 .list li:hover, button:hover, input[type="submit"]:hover, .doneShow:hover {

@@ -2,7 +2,6 @@ class TodosController < ApplicationController
     before_action :get_todo
 
     def show
-        # @todo = Todo.find(params[:todo_id])
     end
 
     def new
