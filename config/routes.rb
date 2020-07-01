@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'lists#index'
-  
+
+  get 'lists/new' => 'lists#new'
+  post 'lists' => 'lists#create'
+
   get 'lists/:list_id/:todo_id' => 'todos#show', as: :todo
   get 'lists/:list_id/:todo_id/toggle' => 'todos#toggle', as: :toggle
 

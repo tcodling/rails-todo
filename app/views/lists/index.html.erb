@@ -10,5 +10,5 @@
         <button><%= link_to "New task", "/lists/#{list.id}" %></button>
     </ul>
     <% end %>
-    <button id='newList'>+</button>
+    <button id='newList'><%= link_to "+", "/lists/new" %></button>
 </div>

@@ -45,7 +45,10 @@ class TodosController < ApplicationController
     end
 
     def get_todo
-        @todo = Todo.find(params[:todo_id])
+        if params[:todo_id]
+            @todo = Todo.find(params[:todo_id])
+        end
+        
         @list = List.find(params[:list_id])
     end
 end
