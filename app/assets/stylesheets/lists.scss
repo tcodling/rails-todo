@@ -44,6 +44,7 @@ body {
     border-radius: 5px;
     padding: 4px;
     margin: 2px;
+    overflow: hidden;
 }
 
 .deleteList {
@@ -65,4 +66,10 @@ body {
     float: right;
     margin: -4px;
     padding: 0 4px;
+    border-left: 1px black solid;
+    height: 31px;
+}
+
+.doneIndex:hover {
+    background-color: gray;
 }
