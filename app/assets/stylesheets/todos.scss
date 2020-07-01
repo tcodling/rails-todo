@@ -11,17 +11,9 @@
     padding: 10px;
 }
 
-.list li:hover, button:hover, input[type="submit"]:hover, .doneShow:hover {
+.doneShow:hover {
     cursor: pointer;
 }
-
-.doneIndex {
-    float: right;
-    font-size: 115%;
-    margin: -4px;
-    padding: 0 4px;
-}
-
 .doneShow {
     border-radius: 50%;
     border: 1px black solid;

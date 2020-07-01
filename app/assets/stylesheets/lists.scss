@@ -52,3 +52,13 @@ body {
     width: 10%;
     border-radius: 5px;
 }
+
+.list li:hover, button:hover, input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.doneIndex {
+    float: right;
+    margin: -4px;
+    padding: 0 4px;
+}
