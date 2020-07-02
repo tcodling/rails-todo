@@ -39,6 +39,7 @@ body {
 .list h3 {
     font-weight: bold;
     margin: 0;
+    text-decoration: underline;
 }
 
 .list li {
@@ -48,6 +49,7 @@ body {
     margin: 2px;
     overflow: hidden;
 }
+
 
 .deleteList {
     margin: 0;
@@ -62,12 +64,12 @@ body {
 
 .list li:hover, button:hover, input[type="submit"]:hover {
     cursor: pointer;
+    background-color: rgb(255, 205, 205);
 }
 
 .doneIndex {
     float: right;
     margin: -4px;
     padding: 0 4px;
-    // border-left: 1px black solid;
     height: 31px;
 }
