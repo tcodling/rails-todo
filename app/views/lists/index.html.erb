@@ -6,7 +6,8 @@
         <h3><%= list.name %></h3>
         <% list.todos.each do |todo| %>
         <%= link_to "lists/#{list.id}/todos/#{todo.id}" do %>
-        <li><%= todo.task %> <span class='doneIndex'><%= todo.done ? "✔" : "✘" %></span></li>
+        <li><%= todo.task %> <div class='doneIndex'><%= link_to todo.done ? "✔" : "✘", "/toggle/#{todo.id}" %></div>
+        </li>
         <% end %>
         <% end %>
         <button><%= link_to "New task", "/lists/#{list.id}" %></button>

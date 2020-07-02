@@ -39,6 +39,12 @@ class TodosController < ApplicationController
         redirect_to "/lists/#{@todo.list_id}/todos/#{@todo.id}"
     end
 
+    def toggleIndex
+        @todo.done = !@todo.done
+        @todo.save
+        redirect_to "/"
+    end
+
     private
     def todo_params
         params.permit(:task, :notes, :list_id)
@@ -48,7 +54,8 @@ class TodosController < ApplicationController
         if params[:todo_id]
             @todo = Todo.find(params[:todo_id])
         end
-        
-        @list = List.find(params[:list_id])
+        if params[:list_id]
+            @list = List.find(params[:list_id])
+        end
     end
 end
