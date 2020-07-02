@@ -1,5 +1,5 @@
 <div class="show">
-    <h2><%= @todo.task %> <span class="doneShow"><%= link_to (@todo.done ? "✔" : "✘"), toggle_path %></span></h2>
+    <h2><%= @todo.task %> <span class="doneShow"><%= link_to (@todo.done ? "☑" : "☐"), toggle_path %></span></h2>
     <h2><%= @todo.notes %></h2>
     <button><%= link_to "Edit", "/lists/#{@list.id}/todos/#{@todo.id}/edit" %></button>
     <button><%= link_to "Delete", "/lists/#{@list.id}/todos/#{@todo.id}/destroy"%></button>
