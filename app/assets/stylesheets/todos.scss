@@ -16,6 +16,7 @@
 .doneShow:hover {
     cursor: pointer;
 }
+
 .doneShow {
     border-radius: 50%;
     // border: 1px black solid;
@@ -23,3 +24,18 @@
     height: 45px;
     display: inline-block;
 }
+
+@media only screen and (max-device-width: 800px) {
+    .show, form {
+        padding: 30px;
+    }
+    .show, form, input, textarea {
+        font-size: 80px !important;
+        margin: 20px auto;
+        border-radius: 30px;
+        width: 90% !important;
+    }
+    .doneShow {
+        font-size: 120px;
+    }
+  }

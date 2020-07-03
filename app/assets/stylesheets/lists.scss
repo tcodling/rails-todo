@@ -73,3 +73,21 @@ body {
     padding: 0 4px;
     height: 31px;
 }
+
+@media only screen and (max-device-width: 800px) {
+    #lists {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .list {
+        padding: 30px;
+    }
+
+    .list, .list li, button, h1, .list h3, h5 {
+        font-size: 80px !important;
+        margin: 20px auto;
+        border-radius: 10px;
+        width: 90% !important;
+    }
+  }
