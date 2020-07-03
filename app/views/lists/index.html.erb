@@ -4,7 +4,7 @@
     <ul class='list'>
         <h4 class='deleteList'><%= link_to "X", "/lists/#{list.id}/destroy" %></h4>
         <h3><%= list.name %></h3>
-        <% list.todos.each do |todo| %>
+        <% list.todos.order(:id).each do |todo| %>
         <%= link_to "lists/#{list.id}/todos/#{todo.id}" do %>
         <li><%= todo.task %> <div class='doneIndex'><%= link_to todo.done ? "☑" : "☐", "/toggle/#{todo.id}" %></div>
         </li>
