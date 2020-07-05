@@ -1,4 +1,6 @@
 class ListsController < ApplicationController
+    before_action :require_user, only: [:index, :show]
+
     def index
         @lists = List.all
     end

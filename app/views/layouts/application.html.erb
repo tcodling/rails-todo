@@ -12,6 +12,17 @@
 
 <body>
     <h1>Ruby on Rails Todo</h1>
+    <% if current_user %>
+    <ul>
+        <li>Welcome <%= current_user.username %>!</li>
+        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+    </ul>
+    <% else %>
+    <ul>
+        <li><%= link_to "Login", 'login' %></a></li>
+        <li><%= link_to "Signup", 'signup' %></a></li>
+    </ul>
+    <% end %>
     <%= yield %>
     <button id="homeButton"><%= link_to "Home", '/' %></button>
 </body>
