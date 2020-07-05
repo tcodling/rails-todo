@@ -16,6 +16,11 @@ Rails.application.routes.draw do
 
   get 'lists/:list_id/todos/:todo_id/destroy' => 'todos#destroy', as: :destroy_todo
   get 'lists/:list_id/destroy' => 'lists#destroy'
+
+  # AUTH
+
+  get 'signup' => 'users#new'
+  resources :users
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
