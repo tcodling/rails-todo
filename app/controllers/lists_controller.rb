@@ -2,7 +2,7 @@ class ListsController < ApplicationController
     before_action :require_user, only: [:index, :show]
 
     def index
-        @lists = List.all
+        @lists = List.where(user_id: current_user.id)
     end
 
     def new
